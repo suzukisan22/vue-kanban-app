@@ -9,19 +9,19 @@ export default {
     // TODO
     throw new Error('FETCH_ALL_TASK_LIST mutation should be implemented')
   },
-  [types.ADD_TASK](state, payload) {
+  [types.ADD_TASK] (state, payload) {
     // TODO
     throw new Error('ADD_TASK mutation should be implemented')
   },
-  [types.UPDATE_TASK](state, payload) {
+  [types.UPDATE_TASK] (state, payload) {
     // TODO
     throw new Error('UPDATE_TASK mutation should be implemented')
   },
-  [types.REMOVE_TASK](state, payload) {
+  [types.REMOVE_TASK] (state, payload) {
     // TODO
     throw new Error('REMOVE_TASK mutation should be implemented')
   },
-  [types.AUTH_LOGOUT](state, payload) {
+  [types.AUTH_LOGOUT] (state, payload) {
     // TODO
     throw new Error('AUTH_LOGOUT mutation should be implemented')
   }
