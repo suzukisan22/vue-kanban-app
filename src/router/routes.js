@@ -6,16 +6,16 @@ export default [
   {
     path: '/',
     component: KbnBoardView,
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: true }
   },
   {
     path: '/login',
-    component: KbnLoginView,
+    component: KbnLoginView
   },
   {
     path: '/tasks/:id',
     component: KbnTaskDetailModal,
-    meta: { requiresAuth: true },
+    meta: { requiresAuth: true }
   },
   {
     path: '*',
