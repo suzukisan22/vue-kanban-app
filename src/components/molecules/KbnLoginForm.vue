@@ -67,7 +67,7 @@ export default {
   props: {
     onlogin: {
       type: Function,
-      reqiored: true
+      required: true
     }
   },
 

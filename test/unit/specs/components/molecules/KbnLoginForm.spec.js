@@ -154,9 +154,9 @@ describe('KbnLoginForm', () => {
             expect(onloginStub.called).to.equal(true) // resolveされた
             const authInfo = onloginStub.args[0][0]
             expect(authInfo.email).to.equal(loginForm.vm.email)
-            expect(authInfo,password).to.equal(loginForm.vm.password)
-            loginForm.vm.$enxtTick(() => {
-              expect (loginForm.vm.error).to.equal('') // エラーメッセージは初期化のまま
+            expect(authInfo.password).to.equal(loginForm.vm.password)
+            loginForm.vm.$nextTick(() => {
+              expect(loginForm.vm.error).to.equal('') // エラーメッセージは初期化のまま
               expect(loginForm.vm.disableLoginAction).to.equal(false) // ログインアクションは可能
               done()
             })
@@ -166,7 +166,7 @@ describe('KbnLoginForm', () => {
 
       describe('reject', () => {
         it('rejectされること', done => {
-          onloginStub.rejects(new Error('login error'))
+          onloginStub.rejects(new Error('login error!'))
 
           // クリックイベント
           loginForm.find('button').trigger('click')
@@ -179,8 +179,8 @@ describe('KbnLoginForm', () => {
             expect(onloginStub.called).to.equal(true)
             const authInfo = onloginStub.args[0][0]
             expect(authInfo.email).to.equal(loginForm.vm.email)
-            expect(authInfo, password).to.equal(loginForm.vm.password)
-            loginForm.vm.$enxtTick(() => {
+            expect(authInfo.password).to.equal(loginForm.vm.password)
+            loginForm.vm.$nextTick(() => {
               expect(loginForm.vm.error).to.equal('login error!') // エラーメッセージが設定される
               expect(loginForm.vm.disableLoginAction).to.equal(false) // ログインアクションは可能
               done()
